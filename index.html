@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>RAJHASTHAN - INTER SCHOOL SHAIBGANJ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            <h1>RAJHASTHAN</h1>
+            <span class="small">School of Governance</span>
+        </div>
+
+        <nav>
+            <ul>
+                <li class="hide"><a class="a1" href="#admission">Admission</a></li>
+                <li class="hide"><a class="a1" href="#contact">Contact</a></li>
+                <li class="hide"><a class="a1" href="#help">Help</a></li>
+                <li>
+                    <a  href="#" class="obtn "><i class="fa-solid fa-bars"></i></a>
+                </li>
+            </ul>
+
+        </nav>
+
+
+
+    </header>
+
+    <nav class="sbar">
+        <ul class="sul">
+            <li><a href="#admission">Admission</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#help">Help</a></li>
+
+        </ul>
+
+    </nav>
+
+    <main>
+        <section>
+            <h1>Welcome to RAJHASTHAN</h1>
+            <p>Your gateway to educational excellence!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 RAJHASTHAN Inter School Shaibganj. All rights reserved.</p>
+    </footer>
+    <script>
+        const dropmenu = document.querySelector('.sbar')
+        const togglebtn = document.querySelector('.obtn')
+        const togglebtnicon = document.querySelector('.obtn i')
+         
+        
+        togglebtn.onclick = function() {
+
+            dropmenu.classList.toggle('open')
+            const isOpen = dropmenu.classList.contains('open')
+
+            togglebtnicon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            :'fa-solid fa-bars'
+        }
+        
+
+    </script>
+</body>
+
+</html>
