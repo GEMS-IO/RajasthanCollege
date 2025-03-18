@@ -18,6 +18,7 @@
 
         <div class="logo">
             <h1 class="h1">RAJHASTHAN</h1>
+            <hr>
             <span class="small">School of Governance</span>
         </div>
 
@@ -38,10 +39,11 @@
     </header>
 
     <nav class="sbar">
+       
         <ul class="sul">
             <li><a href="admission.html">Admission</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="#help">Help</a></li>
+            <li><a href="form.html">Help</a></li>
 
         </ul>
 
@@ -61,10 +63,10 @@
         const dropmenu = document.querySelector('.sbar')
         const togglebtn = document.querySelector('.obtn')
         const togglebtnicon = document.querySelector('.obtn i')
-         
+        
         
         togglebtn.onclick = function() {
-
+            
             dropmenu.classList.toggle('open')
             const isOpen = dropmenu.classList.contains('open')
 
