@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEMS - FORM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+
+            font-family: 'outfit';
+            background: linear-gradient(#ffdad5, #fff7f9);
+        }
+
+        .contact-containor {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .contact-left {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 20px;
+        }
+
+        .contact-left-header h2 {
+            font-weight: 600;
+            color: #a363aa;
+            font-size: 40px;
+            margin-bottom: 5px;
+
+        }
+
+        .contact-left-header hr {
+            bottom: none;
+            width: 120px;
+            height: 5px;
+            background-color: #a363aa;
+            border-radius: 10px;
+            margin-bottom: 20px;
+
+        }
+
+        .inputs {
+            width: 400px;
+            height: 50px;
+            border: none;
+            outline: none;
+            padding-left: 25px;
+            font-weight: 500;
+            color: #6666;
+            border-radius: 50px;
+
+        }
+
+        .textarea {
+            height: 140px;
+            padding-top: 15px;
+            border-radius: 20px;
+        }
+
+        .inputs:focus {
+            border: 1px solid #ff994f;
+        }
+
+        .inputs::placeholder {
+            color: #a9a9a9;
+        }
+
+        .contact-left button {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 15px 30px;
+            font-size: 15px;
+            color: #fff;
+            gap: 10px;
+            border: none;
+            border-radius: 50px;
+            background: linear-gradient(270deg, #ff994f, #fa6d86);
+            cursor: pointer;
+        }
+
+        @property --angle {
+            syntax: "<angle>";
+            initial-value: 0deg;
+            inherits: false;
+        }
+
+        .contact-left button::after,
+        .contact-left button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            background-image: conic-gradient(from var(--angle), transparent 30%, #a363aa);
+            height: 100%;
+            width: 100%;
+            border-radius: 50px;
+            padding: 3px;
+            z-index: -1;
+            animation:2s spin linear infinite;
+        }
+
+        .contact-left button::after {
+            filter:
+                blur(1.9rem);
+            opacity:
+                1;
+        }
+
+        @keyframes spin {
+            from {
+                --angle: 0deg;
+            }
+
+            to {
+                --angle: 360deg;
+            }
+        }
+        @media (max-width:800px) {
+            .inputs{
+                width: 80vw;
+            }
+            .contact-right{
+                display: 
+                none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contact-containor">
+        <form action="https://api.web3forms.com/submit"  method="post" class="contact-left">
+            <input type="hidden" name="access_key" value="cb325dc0-0f0c-45a1-80ba-7be3a1322bfa">
+            <div class="contact-left-header">
+                <h2>Get in touch</h2>
+                <hr>
+            </div>
+            <input type="text" name="name" placeholder="Enter your name" class="inputs" required>
+            <input type="email" name="email" placeholder="Enter your email" class="inputs" required>
+            <textarea name="mmessage" placeholder="Your Message" class="inputs textarea" required></textarea>
+            <button type="submit">Submite</button>
+        </form>
+        <div class="contact-right">
+            <!-- <img src="paws.png" alt="" width="100%"> -->
+        </div>
+    </div>
+</body>
+
+</html>
