@@ -1,76 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School Registration Form</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            background: rgba(0, 36, 104, 0.776);
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
-            height: 100vh;
+            /* height: 100vh; */
         }
+
         .form-container {
             height: 100vh;
-            background-color: #fff;
+            width: 768px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            /* background-color: #fff; */
             padding: 20px;
+            margin-left: 15%;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* box-shadow: 0 4px 8px rgb(255, 255, 255); */
             width: 100%;
             max-width: 600px;
         }
-        h1 {
+
+        h2 {
             text-align: center;
-            color: #333;
+            color: rgb(7 0 66);
+            margin-bottom: 5px;
+            font-weight: 1000;
+            font-size: 1.8rem;
         }
+
+        hr {
+            height: 2px;
+            border: none;
+            background-color: rgb(0 18 53);
+        }
+
+        .headre {
+            margin-bottom: 17px;
+        }
+
         label {
-            font-weight: bold;
+            font-weight: 500;
             display: block;
             margin-bottom: 8px;
-            color: #333;
+            color: rgb(255, 255, 255);
         }
-        input, select, textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 8px 0 16px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
+
+        input,
+        select,
+        textarea {
+            width: 350px;
+            height: 43px;
+            border: none;
+            outline: none;
+            padding-left: 25px;
+            font-weight: 500;
+            color: #5f5f5f;
+            border-radius: 10px;
+            margin-bottom: 4px;
         }
-        input[type="number"], input[type="tel"], input[type="email"] {
+
+        input[type="number"],
+        input[type="tel"],
+        input[type="email"] {
             font-size: 16px;
         }
+
+        input:focus {
+            border: 2px solid rgb(0 18 53);
+        }
+
         textarea {
             font-size: 16px;
             resize: vertical;
+            height: 100px;
+            padding-top: 12px;
         }
+
         button {
-            background-color: #007bff;
+            background: linear-gradient(270deg, rgb(57 84 137), rgb(0 18 53));
             color: #fff;
             border: none;
             padding: 12px 20px;
             font-size: 16px;
             border-radius: 4px;
             cursor: pointer;
-            width: 100%;
+            width: 25%;
+            margin-top: 5px;
+
+            border-radius: 16px;
         }
+
         button:hover {
             background-color: #0056b3;
         }
+
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 6px;
+        }
+
+        @media (max-width: 768px) {
+            .form-container {
+                width: 80%;
+                padding-left: 0;
+                margin-left: 10%;
+            }
+
+            input,
+            textarea {
+                width: 50vw;
+            }
+
+            h2 {
+                font-weight: 600;
+            }
+
+            label {
+                font-size: 0.855rem;
+
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="form-container">
-        <h1>School Registration Form</h1>
-        <form action="https://api.web3forms.com/submit" method="POST">
+        <div class="headre">
+            <h2>School Admission Form</h2>
+            <hr>
+        </div>
+
+        <form action="https://api.web3forms.com/submit" method="POST" class="form">
             <input type="hidden" name="access_key" value="cb325dc0-0f0c-45a1-80ba-7be3a1322bfa">
             <div class="form-group">
                 <label for="studentName">Full Name:</label>
@@ -82,16 +158,6 @@
                 <input type="number" id="age" name="age" required>
             </div>
 
-            <div class="form-group">
-                <label for="grade">Grade Level:</label>
-                <select id="grade" name="grade" required>
-                    <option value="1">1st Grade</option>
-                    <option value="2">2nd Grade</option>
-                    <option value="3">3rd Grade</option>
-                    <option value="4">4th Grade</option>
-                    <option value="5">5th Grade</option>
-                </select>
-            </div>
 
             <div class="form-group">
                 <label for="parentName">Parent/Guardian Name:</label>
@@ -117,4 +183,5 @@
         </form>
     </div>
 </body>
+
 </html>
