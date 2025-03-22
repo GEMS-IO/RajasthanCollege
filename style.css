@@ -112,7 +112,7 @@ nav ul li .a1:hover::before {
     position: fixed;
     margin: 0 12px;
     justify-self: center;
-    top: 19vh;
+    
     width: 95.5%;
     height: 0px;
     background-color: var(--bg);
