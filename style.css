@@ -1,15 +1,17 @@
 /* General Styling */
 * {
-    
+
     margin: 0;
     padding: 0;
 }
-:root{
+
+:root {
     --bg: rgba(62, 81, 136, 0.652);
     --text: rgb(255, 255, 255);
     --top: #2c3e50;
     --hcolor: #2c3e50;
 }
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg);
@@ -81,11 +83,11 @@ nav ul .hide .a1,
 }
 
 nav ul .hide .a1::before {
-    content:'';
+    content: '';
     position: absolute;
     top: 100%;
     left: 0;
-    height:2px;
+    height: 2px;
     width: 0;
     background-color: #fff;
     border-radius: 3px;
@@ -122,7 +124,8 @@ nav ul li .a1:hover::before {
     box-shadow: -10px 0 10px rgba(31, 31, 31, 0.74);
     border-radius: 10px;
     transition: height ease-in-out 0.1s;
-    overflow: hidden;z-index: 1;
+    overflow: hidden;
+    z-index: 1;
 }
 
 .sbar ul {
@@ -197,8 +200,19 @@ nav ul li .a1:hover::before {
     background: #fff;
     padding: 9px 15px;
     border-radius: 8px;
+    text-align: center;
 }
 
+h2 {
+    font-size: 1.4rem;
+}
+
+.underlin {
+    width: 123px;
+    margin: 5px auto 0 auto;
+    border-bottom: 5px solid var(--hcolor);
+    border-radius: 1rem;
+}
 
 .sec2 {
     display: flex;
@@ -329,6 +343,22 @@ footer p {
     color: #fff;
 }
 
+.result {
+    width: 100%;
+    font-size: 0.8em;
+    padding-bottom: 15px;
+}
+
+.result a {
+    padding: 8px;
+    border-radius: 10px;
+    background-color: var(--hcolor);
+    text-decoration: none;
+}
+
+.result a span {
+    color: var(--text);
+}
 
 
 /* Responsive Design */
